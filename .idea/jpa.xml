@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit moduleName="tcg-data" name="tcg-data" framework="JPA" ormUnit="tcg-data:tcg-data" defaultDataSourceId="afd13903-f70a-44a7-8daf-f2c723f9dcec" />
+    </persistence-units>
+  </component>
+</project>

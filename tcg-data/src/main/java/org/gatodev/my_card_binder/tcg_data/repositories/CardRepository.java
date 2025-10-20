@@ -1,0 +1,16 @@
+package org.gatodev.my_card_binder.tcg_data.repositories;
+
+import org.gatodev.my_card_binder.enums.TCG;
+import org.gatodev.my_card_binder.tcg_data.entities.Card;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface CardRepository extends JpaRepository<Card, Long>, JpaSpecificationExecutor<Card> {
+    @Query("SELECT DISTINCT c.tcg FROM Card c")
+    List<TCG> findDistinctTcgs();
+}
